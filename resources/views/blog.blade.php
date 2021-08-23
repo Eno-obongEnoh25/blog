@@ -22,7 +22,7 @@
     <div class="row">
     @foreach ($posts as $post)
         <div class="col-md-6">
-               <img class="p-3" style="width: 80%" src="{{asset( 'images/'. $post->image_path )}}">
+               <img class="p-3" style="width: 80%" src="{{asset('images/'. $post->image_path)}}">
         </div>
         <div class="col-md-6 p-5">
             <h2>{{ $post->title }}</h2>
