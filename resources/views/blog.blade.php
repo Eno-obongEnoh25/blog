@@ -22,11 +22,11 @@
     <div class="row">
     @foreach ($posts as $post)
         <div class="col-md-6">
-               <img class="p-3" style="width: 80%" src="{{asset( 'images/'. $post->image_path )}}">
+               <img class="p-3" style="width: 80%" src="{{asset('images/'. $post->image_path)}}">
         </div>
         <div class="col-md-6 p-5">
             <h2>{{ $post->title }}</h2>
-            By<span class="italic"> {{ $post->author }}</span> on {{ date('D M d Y', strtotime($post->created_at)) }} <br>
+            By<span class="italic"> {{ $post->author }}</span> on {{ date('D d M Y', strtotime($post->created_at)) }} <br>
             <a href="{{ route('showUserPost', $post->id)}}"><button class="btn btn-primary text-black rounded-pill">Keep Reading</button></a><br>
 
             @if(isset(Auth::user()->id) && Auth::user()->id == $post->user_id)
